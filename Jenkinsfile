@@ -1,4 +1,22 @@
 pipeline {
+    agent any  // This means the pipeline will run on any available Jenkins age>
+
+    stages {
+        // Stage to clone the repository
+        stage('Clone Repository') {
+            steps {
+                git url: 'https://github.com/MinaHany98/20216105.git', branch:             }
+        }
+
+        // Stage to execute the bash script
+        stage('Execute Bash Script') {
+            steps {
+                sh './list_files.sh'  // This will run the script in the reposi>
+            }
+        }
+    }
+}
+pipeline {
     agent any  // This means the pipeline will run on any available Jenkins agent
 
     stages {
@@ -17,3 +35,23 @@ pipeline {
         }
     }
 }
+pipeline {
+    agent any  // This means the pipeline will run on any available Jenkins age>
+
+    stages {
+        // Stage to clone the repository
+        stage('Clone Repository') {
+            steps {
+                git url: 'https://github.com/MinaHany98/20216105.git', branch: >
+            }
+        }
+
+        // Stage to execute the bash script
+        stage('Execute Bash Script') {
+            steps {
+                sh './list_files.sh'  // This will run the script in the reposi>
+            }
+        }
+    }
+}
+
